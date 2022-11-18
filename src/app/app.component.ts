@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'angular_6th_ca4_jobApplicationForm';
+  onSubmit(frm: NgForm) {
+    alert("Form Submitted Successfully...");
+    console.log(frm.value);
+  }
 }
